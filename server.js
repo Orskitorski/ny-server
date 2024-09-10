@@ -10,6 +10,7 @@ app.get("/", (request, response) => {
   response.render("index.njk", {
     message: "Hemsidan nunjuckad och klar weee!",
     title: "Hem",
+    items: ("Grabb", "oscar"),
     url: "https://github.com/Orskitorski",
   })
 })

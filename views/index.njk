@@ -1,6 +1,11 @@
 
 {% extends "layout.njk" %}
 {% block content %}
-    <h1>{{message}}</h1>
-    <p>Klicka <a href="/om">Här</a></p>
+    <main class="container">
+        <h1>{{message}}</h1>
+        <p>Klicka <a href="/om">Här</a></p>
+        {% for item in items %}
+            <p>{{item}}</p>
+        {% endfor %}
+    </main>
 {% endblock %}
