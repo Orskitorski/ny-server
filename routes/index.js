@@ -4,7 +4,7 @@ const router = express.Router()
 
 router.get("/test", (req, res) => {
     res.send("Hello World")
-});
+})
 
 router.get("/", (request, response) => {
     console.log(request.query)
@@ -12,7 +12,7 @@ router.get("/", (request, response) => {
     response.render("index.njk", {
         message: `Hemsidan nunjuckad och klar weee! Jag heter ${name}`,
         title: "Hem",
-        items: ("Grabb", "1234"),
+        items: ("1234"),
         url: "https://github.com/Orskitorski",
     })
 })

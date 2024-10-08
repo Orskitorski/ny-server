@@ -3,6 +3,7 @@ import nunjucks from "nunjucks"
 import morgan from "morgan"
 import indexRouter from "./routes/index.js"
 import searchRouter from "./routes/search.js"
+import calculatorRouter from "./routes/calculator.js"
 
 const app = express()
 
@@ -13,8 +14,8 @@ nunjucks.configure("views", {
 
 app.use(express.static("public"))
 app.use(morgan("dev"))
+app.use("/calculator", calculatorRouter)
 app.use("/search", searchRouter)
-
 app.use("/", indexRouter)
 
 const PORT = process.env.PORT || 3000
